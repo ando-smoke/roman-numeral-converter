@@ -16,4 +16,12 @@ describe("toRomanNumeral", function() {
   it("takes in the number 8 and returns the roman numeral 'VIII'", function() {
     expect(toRomanNumeral(8)).to.equal("VIII");
   });
+
+  it("takes in the number 66 and returns the roman numeral 'LXVI'", function() {
+    expect(toRomanNumeral(66)).to.equal("LXVI");
+  });
+
+  it("takes in the number 2,778 and returns the roman numeral 'MMDCCLXXVIII'", function() {
+    expect(toRomanNumeral(2778)).to.equal("MMDCCLXXVIII");
+  });
 });
