@@ -7,3 +7,9 @@ describe("repeatString", function() {
     expect(repeatString('V', 0)).to.equal('');
   });
 });
+
+describe("toRomanNumeral", function() {
+  it("takes in the number 3 and returns the roman numeral 'III'", function() {
+    expect(toRomanNumeral(3)).to.equal("III");
+  });
+});
