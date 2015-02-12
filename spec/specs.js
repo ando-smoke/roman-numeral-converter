@@ -21,8 +21,20 @@ describe("toRomanNumeral", function() {
     expect(toRomanNumeral(8)).to.equal("VIII");
   });
 
+  it("takes in the number 9 and returns the roman numeral 'IX'", function() {
+    expect(toRomanNumeral(9)).to.equal("IX");
+  });
+
+  it("takes in the number 14 and returns the roman numeral 'XIV'", function() {
+    expect(toRomanNumeral(14)).to.equal("XIV");
+  });
+
   it("takes in the number 66 and returns the roman numeral 'LXVI'", function() {
     expect(toRomanNumeral(66)).to.equal("LXVI");
+  });
+
+  it("takes in the number 99 and returns the roman numeral 'XCIX'", function() {
+    expect(toRomanNumeral(99)).to.equal("XCIX");
   });
 
   it("takes in the number 2,778 and returns the roman numeral 'MMDCCLXXVIII'", function() {
