@@ -34,3 +34,15 @@ var toRomanNumeral = function(num) {
 
   return romanNumString;
 };
+
+$(document).ready(function() {
+  $("form#integer_to_rn_convert").submit(function(event) {
+    var integer = parseInt($("input#integer").val());
+    var romanNumString = toRomanNumeral(integer);
+
+    $(".roman-numeral").text(romanNumString);
+
+    $("#result").show();
+    event.preventDefault();
+  });
+});
