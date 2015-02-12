@@ -22,8 +22,29 @@ var toRomanNumeral = function(num) {
     quotient = Math.floor(num / divisor);
 
     if (quotient > 0) {
-      romanNumString += repeatString(romanNumDigits[i][0], quotient);
-      num %= divisor;
+      if (quotient !== 4) {
+        romanNumString += repeatString(romanNumDigits[i][0], quotient);
+        num %= divisor;
+      }
+      else {
+        var lowDigitIndex = 0;
+        var highDigitIndex = 0;
+
+        for (var j = 0; (highDigitIndex === 0) &&
+          (j < romanNumDigits.length - 1); ++j) {
+          for (var k = j + 1; k < romanNumDigits.length; ++k) {
+            if (romanNumDigits[k][1] - romanNumDigits[j][1] === quotient) {
+              lowDigitIndex = j;
+              highDigitIndex = k;
+              break;
+            }
+          }
+        }
+
+        romanNumString +=
+          romanNumDigits[lowDigitIndex][0] +
+            romanNumDigits[highDigitIndex][0];
+      }
     }
   }
 

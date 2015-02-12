@@ -13,6 +13,10 @@ describe("toRomanNumeral", function() {
     expect(toRomanNumeral(3)).to.equal("III");
   });
 
+  it("takes in the number 4 and returns the roman numeral 'IV'", function() {
+    expect(toRomanNumeral(4)).to.equal("IV");
+  });
+
   it("takes in the number 8 and returns the roman numeral 'VIII'", function() {
     expect(toRomanNumeral(8)).to.equal("VIII");
   });
